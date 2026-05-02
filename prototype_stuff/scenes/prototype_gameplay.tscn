@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://d0d04jckloca6"]
+
+[ext_resource type="Script" uid="uid://rxvtwtwwpj7c" path="res://prototype_stuff/scripts/prototype_gameplay.gd" id="1_fwxon"]
+
+[node name="Control" type="Control" unique_id=1489374112]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwxon")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=131704530]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.5
+offset_top = -40.0
+offset_right = 35.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LabelMoney" type="Label" parent="VBoxContainer" unique_id=2091210333]
+layout_mode = 2
+text = "Money: 2137"
+
+[node name="LabelGuildLevel" type="Label" parent="VBoxContainer" unique_id=1177941199]
+layout_mode = 2
+text = "Guild level: 67"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1756699009]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="ButtonExit" type="Button" parent="CenterContainer" unique_id=264654202]
+layout_mode = 2
+text = "X"
+
+[connection signal="pressed" from="CenterContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
