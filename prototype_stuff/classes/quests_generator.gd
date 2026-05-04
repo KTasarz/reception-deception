@@ -1,6 +1,8 @@
 extends Node
 class_name QuestsGenerator
 
+@export var all_quest_templates : Array[QuestTemplate]
+
 func generate_quest(npc : QuestsGivers) -> Quest:
 	var quest = Quest.new()
 	
@@ -23,8 +25,20 @@ func generate_quest(npc : QuestsGivers) -> Quest:
 		5:
 			quest.money = quest.money * randf_range(1.0,5.0)
 	
-	#tags
+	var valid_templates : Array[QuestTemplate] = []
+	for template in all_quest_templates:
+		if npc.type in template.allowed_givers:
+			valid_templates.append(template)
 	
-	#location
+	var chosen_template = valid_templates.pick_random()
+	quest.quest_name = chosen_template.name
+	quest.tags = chosen_template.tags.duplicate() 
+		
+		# Losujemy jeden z opisów
+	if chosen_template.description_templates.size() > 0:
+		var raw_desc = chosen_template.description_templates.pick_random()
+			# Fajna sztuczka: dynamiczna podmiana tekstu w opisie!
+		raw_desc = raw_desc.replace("{NAME}", npc.name)
+		quest.description = raw_desc
 	
 	return quest

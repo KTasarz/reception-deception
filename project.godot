@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 SceneManager="*uid://ddx4c8e4736fy"
 GameStatsManager="*uid://fr44pvrkcsbh"
 QuestsManager="*uid://cqkxp4woxhgea"
+NameManager="*uid://bfa8kgujpudbt"
 
 [display]
 
