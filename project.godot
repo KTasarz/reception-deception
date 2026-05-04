@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Project butter"
+config/name="Reception Deception"
 run/main_scene="res://prototype_stuff/scenes/prototype_menu.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=60
