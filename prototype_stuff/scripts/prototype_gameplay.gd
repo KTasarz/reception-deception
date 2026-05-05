@@ -22,9 +22,13 @@ func _on_button_exit_pressed() -> void:
 func _on_new_quests_pressed() -> void:
 	var npc : QuestsGivers = $QuestsGiverGenerator.generateQuestsGiver()
 	var quest : Quest = $QuestsGenerator.generate_quest(npc)
+	var locations : String = ""
+	for i in quest.location_chances:
+		locations = locations + str(QuestsManager.location.keys()[i]) + " "
 	label_quests_info.text = (
 		"NPC NAME: "+ npc.name + " " + npc.surname +"\n"+
 		"NPC TYPE: "+ QuestsManager.quests_givers_type.keys()[npc.type] +"\n"+
 		"QUEST NAME: " + quest.quest_name +"\n"+
-		"QUEST MONEY: " +str(quest.money)
+		"QUEST MONEY: " +str(quest.money) +"\n"+
+		"QUEST LOCATIONS: " + locations
 	)

@@ -6,6 +6,11 @@ class_name QuestsGenerator
 func generate_quest(npc : QuestsGivers) -> Quest:
 	var quest = Quest.new()
 	
+	var valid_templates : Array[QuestTemplate] = []
+	for template in all_quest_templates:
+		if npc.type in template.allowed_givers:
+			valid_templates.append(template)
+	
 	quest.true_level_difficulty = randi_range(GameStatsManager.guild_level-10,GameStatsManager.guild_level+5)
 	if quest.true_level_difficulty < 1:
 		quest.true_level_difficulty = 1
@@ -25,14 +30,10 @@ func generate_quest(npc : QuestsGivers) -> Quest:
 		5:
 			quest.money = quest.money * randf_range(1.0,5.0)
 	
-	var valid_templates : Array[QuestTemplate] = []
-	for template in all_quest_templates:
-		if npc.type in template.allowed_givers:
-			valid_templates.append(template)
-	
-	var chosen_template = valid_templates.pick_random()
+	var chosen_template : QuestTemplate = valid_templates.pick_random()
 	quest.quest_name = chosen_template.name
-	quest.tags = chosen_template.tags.duplicate() 
+	quest.tags = chosen_template.tags.duplicate()
+	quest.location_chances = chosen_template.location_chances.duplicate() 
 		
 		# Losujemy jeden z opisów
 	if chosen_template.description_templates.size() > 0:
