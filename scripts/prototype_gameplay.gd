@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_exit_pressed() -> void:
-	SceneManager.change_scene("res://prototype_stuff/scenes/prototype_menu.tscn")
+	SceneManager.change_scene("res://scenes/prototype_menu.tscn")
 
 
 func _on_new_quests_pressed() -> void:

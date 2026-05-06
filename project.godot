@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Reception Deception"
-run/main_scene="res://prototype_stuff/scenes/prototype_menu.tscn"
+run/main_scene="res://scenes/prototype_menu.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -35,12 +35,12 @@ project/assembly_name="Project butter"
 [file_customization]
 
 folder_colors={
-"res://prototype_stuff/": "gray",
-"res://prototype_stuff/autoload/": "teal",
-"res://prototype_stuff/classes/": "blue",
-"res://prototype_stuff/resource/": "yellow",
-"res://prototype_stuff/scenes/": "red",
-"res://prototype_stuff/scripts/": "purple"
+"res://assets/": "orange",
+"res://autoload/": "teal",
+"res://classes/": "blue",
+"res://resource/": "yellow",
+"res://scenes/": "red",
+"res://scripts/": "purple"
 }
 
 [physics]

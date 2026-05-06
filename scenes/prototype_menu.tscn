@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4nm5t3iwduej"]
 
-[ext_resource type="Script" uid="uid://t1mnko3tdkj1" path="res://prototype_stuff/scripts/prototype_menu.gd" id="1_ebtjf"]
+[ext_resource type="Script" uid="uid://t1mnko3tdkj1" path="res://scripts/prototype_menu.gd" id="1_mmrgl"]
 
 [node name="Control" type="Control" unique_id=2038857736]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ebtjf")
+script = ExtResource("1_mmrgl")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=987140820]
 layout_mode = 0

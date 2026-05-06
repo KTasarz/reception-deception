@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d0d04jckloca6"]
 
-[ext_resource type="Script" uid="uid://rxvtwtwwpj7c" path="res://prototype_stuff/scripts/prototype_gameplay.gd" id="1_fwxon"]
-[ext_resource type="Script" uid="uid://b8fok6dvldr6n" path="res://prototype_stuff/classes/quests_generator.gd" id="2_25jxk"]
-[ext_resource type="Script" uid="uid://cka85p7ksx33j" path="res://prototype_stuff/resource/quests_template.gd" id="3_mxlfa"]
-[ext_resource type="Script" uid="uid://bcv4imgnovsoe" path="res://prototype_stuff/classes/quests_givers_generator.gd" id="4_lqga7"]
+[ext_resource type="Script" uid="uid://rxvtwtwwpj7c" path="res://scripts/prototype_gameplay.gd" id="1_8qqcq"]
+[ext_resource type="Script" uid="uid://b8fok6dvldr6n" path="res://classes/quests_generator.gd" id="2_w81h0"]
+[ext_resource type="Script" uid="uid://cka85p7ksx33j" path="res://resource/quests_template.gd" id="3_1u8jd"]
+[ext_resource type="Script" uid="uid://bcv4imgnovsoe" path="res://classes/quests_givers_generator.gd" id="4_lrif6"]
 
 [sub_resource type="Resource" id="Resource_lqga7"]
-script = ExtResource("3_mxlfa")
+script = ExtResource("3_1u8jd")
 name = "Uśmiechnij się"
 description = "Elo mordo"
 location_chances = Dictionary[int, float]({
@@ -17,7 +17,7 @@ allowed_givers = Array[int]([0, 1, 2, 3, 4, 5])
 metadata/_custom_type_script = "uid://cka85p7ksx33j"
 
 [sub_resource type="Resource" id="Resource_iqjr1"]
-script = ExtResource("3_mxlfa")
+script = ExtResource("3_1u8jd")
 name = "Hunt 10 boars"
 description = "I need 10 hides from boars for my private use"
 is_location_hidden = true
@@ -30,7 +30,7 @@ allowed_givers = Array[int]([1, 3, 5])
 metadata/_custom_type_script = "uid://cka85p7ksx33j"
 
 [sub_resource type="Resource" id="Resource_5roxv"]
-script = ExtResource("3_mxlfa")
+script = ExtResource("3_1u8jd")
 name = "Okradnij kupca"
 description = "I need you find someone capable of robbing one of the merchants"
 location_chances = Dictionary[int, float]({
@@ -47,14 +47,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fwxon")
+script = ExtResource("1_8qqcq")
 
 [node name="QuestsGenerator" type="Node" parent="." unique_id=345530928]
-script = ExtResource("2_25jxk")
-all_quest_templates = Array[ExtResource("3_mxlfa")]([SubResource("Resource_lqga7"), SubResource("Resource_iqjr1"), SubResource("Resource_5roxv")])
+script = ExtResource("2_w81h0")
+all_quest_templates = Array[ExtResource("3_1u8jd")]([SubResource("Resource_lqga7"), SubResource("Resource_iqjr1"), SubResource("Resource_5roxv")])
 
 [node name="QuestsGiverGenerator" type="Node" parent="." unique_id=1444592906]
-script = ExtResource("4_lqga7")
+script = ExtResource("4_lrif6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=131704530]
 layout_mode = 1
