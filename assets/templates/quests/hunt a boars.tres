@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestTemplate" format=3 uid="uid://cjxen14dv1g0p"]
+
+[ext_resource type="Script" uid="uid://cka85p7ksx33j" path="res://resource/quests_template.gd" id="1_ro72v"]
+
+[resource]
+script = ExtResource("1_ro72v")
+name = "Hunt a boars"
+description = "I need 10 hides from boars for my private use"
+is_location_hidden = true
+location_chances = Dictionary[int, float]({
+1: 1.0,
+3: 0.2
+})
+tags = Array[int]([3])
+allowed_givers = Array[int]([1, 3, 5])
+metadata/_custom_type_script = "uid://cka85p7ksx33j"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestTemplate" format=3 uid="uid://bmi8ty1r6ljlj"]
+
+[ext_resource type="Script" uid="uid://cka85p7ksx33j" path="res://resource/quests_template.gd" id="1_1s30n"]
+
+[resource]
+script = ExtResource("1_1s30n")
+name = "Steal a ring"
+description = "I need you find someone capable of robbing one of the merchants"
+tags = Array[int]([1, 2])
+allowed_givers = Array[int]([3, 5])
+metadata/_custom_type_script = "uid://cka85p7ksx33j"
