@@ -34,12 +34,12 @@ func generate_quest(npc : QuestsGivers) -> Quest:
 	quest.quest_name = chosen_template.name
 	quest.tags = chosen_template.tags.duplicate()
 	quest.location_chances = chosen_template.location_chances.duplicate() 
-		
-		# Losujemy jeden z opisów
-	if chosen_template.description_templates.size() > 0:
-		var raw_desc = chosen_template.description_templates.pick_random()
-			# Fajna sztuczka: dynamiczna podmiana tekstu w opisie!
-		raw_desc = raw_desc.replace("{NAME}", npc.name)
-		quest.description = raw_desc
+	quest.description = chosen_template.description	
+		## Losujemy jeden z opisów
+	#if chosen_template.description_templates.size() > 0:
+		#var raw_desc = chosen_template.description_templates.pick_random()
+			## Fajna sztuczka: dynamiczna podmiana tekstu w opisie!
+		#raw_desc = raw_desc.replace("{NAME}", npc.name)
+		#quest.description = raw_desc
 	
 	return quest

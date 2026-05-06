@@ -8,6 +8,7 @@
 [sub_resource type="Resource" id="Resource_lqga7"]
 script = ExtResource("3_mxlfa")
 name = "Uśmiechnij się"
+description = "Elo mordo"
 location_chances = Dictionary[int, float]({
 0: 1.0
 })
@@ -17,7 +18,9 @@ metadata/_custom_type_script = "uid://cka85p7ksx33j"
 
 [sub_resource type="Resource" id="Resource_iqjr1"]
 script = ExtResource("3_mxlfa")
-name = "Upoluj dziki"
+name = "Hunt 10 boars"
+description = "I need 10 hides from boars for my private use"
+is_location_hidden = true
 location_chances = Dictionary[int, float]({
 1: 1.0,
 3: 0.2
@@ -29,6 +32,7 @@ metadata/_custom_type_script = "uid://cka85p7ksx33j"
 [sub_resource type="Resource" id="Resource_5roxv"]
 script = ExtResource("3_mxlfa")
 name = "Okradnij kupca"
+description = "I need you find someone capable of robbing one of the merchants"
 location_chances = Dictionary[int, float]({
 0: 1.0
 })

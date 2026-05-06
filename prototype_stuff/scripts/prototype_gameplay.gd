@@ -35,5 +35,6 @@ func _on_new_quests_pressed() -> void:
 		"QUEST MONEY: " +str(quest.money) +"\n"+
 		"QUEST LEVEL: " + str(quest.true_level_difficulty) +"\n"+
 		"QUEST LOCATIONS: " + locations +"\n"+
-		"QUEST TAGS: " + tags
+		"QUEST TAGS: " + tags +"\n"+
+		"QUEST DESCRIPTION: " + quest.description
 	)
