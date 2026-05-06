@@ -27,4 +27,14 @@ text = "Menu do przejścia scen"
 layout_mode = 2
 text = "Prototyp main gameplayu"
 
+[node name="Buttongraphics" type="Button" parent="CenterContainer/VBoxContainer" unique_id=220614061]
+layout_mode = 2
+text = "Graphics test ground"
+
+[node name="ButtonExit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=852257851]
+layout_mode = 2
+text = "Exit"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonGameplay" to="." method="_on_button_gameplay_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Buttongraphics" to="." method="_on_buttongraphics_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
