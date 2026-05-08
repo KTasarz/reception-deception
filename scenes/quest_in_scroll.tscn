@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cyftfejwbd5xl"]
+
+[ext_resource type="Texture2D" uid="uid://sn3bax536r4b" path="res://assets/sprites/prototype stuff/base scroll.png" id="1_ecr43"]
+
+[node name="QuestInScroll" type="TextureRect" unique_id=580478946]
+texture = ExtResource("1_ecr43")

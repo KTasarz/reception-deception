@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxo7v8f786glr"]
 
 [ext_resource type="Script" uid="uid://djdd8i13645e8" path="res://scripts/prototype_graphics.gd" id="1_bd3ny"]
-[ext_resource type="Texture2D" uid="uid://c0mjyhi7ewiw8" path="res://assets/sprites/prototype stuff/bottle of wine.png" id="2_hcv8k"]
+[ext_resource type="Texture2D" uid="uid://sn3bax536r4b" path="res://assets/sprites/prototype stuff/base scroll.png" id="2_vr28a"]
 [ext_resource type="Texture2D" uid="uid://dnec6077ylbw3" path="res://assets/sprites/prototype stuff/Megumin.png" id="3_vr28a"]
 [ext_resource type="Texture2D" uid="uid://pwi7n4wicfmq" path="res://assets/sprites/prototype stuff/beer.png" id="4_dq874"]
 
@@ -27,14 +27,14 @@ grow_horizontal = 0
 layout_mode = 2
 text = "X"
 
-[node name="Wine" type="TextureRect" parent="." unique_id=1003841429]
+[node name="Quest" type="TextureRect" parent="." unique_id=1003841429]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 14.0
-offset_right = 135.0
-offset_bottom = 142.0
+offset_left = 22.0
+offset_top = 31.0
+offset_right = 109.0
+offset_bottom = 114.0
 mouse_filter = 0
-texture = ExtResource("2_hcv8k")
+texture = ExtResource("2_vr28a")
 stretch_mode = 4
 
 [node name="NPC" type="TextureRect" parent="." unique_id=396142534]
@@ -56,4 +56,4 @@ texture = ExtResource("4_dq874")
 stretch_mode = 4
 
 [connection signal="pressed" from="CenterContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
-[connection signal="gui_input" from="Wine" to="." method="_on_wine_gui_input"]
+[connection signal="gui_input" from="Quest" to="." method="_on_wine_gui_input"]

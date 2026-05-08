@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0d04jckloca6"]
 
 [ext_resource type="Script" uid="uid://rxvtwtwwpj7c" path="res://scripts/prototype_gameplay.gd" id="1_8qqcq"]
+[ext_resource type="Texture2D" uid="uid://btty80oocfmqw" path="res://assets/sprites/prototype stuff/backround placeholder.png" id="2_8qqcq"]
 [ext_resource type="Script" uid="uid://b8fok6dvldr6n" path="res://classes/quests_generator.gd" id="2_w81h0"]
 [ext_resource type="Script" uid="uid://bcv4imgnovsoe" path="res://classes/quests_givers_generator.gd" id="4_lrif6"]
 
@@ -12,6 +13,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8qqcq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=842899436]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_8qqcq")
 
 [node name="QuestsGenerator" type="Node" parent="." unique_id=345530928]
 script = ExtResource("2_w81h0")
