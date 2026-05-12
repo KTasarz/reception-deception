@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://ceh7tfaj4klx5" path="res://scripts/quest_in_scroll.gd" id="2_ref4s"]
 
 [node name="QuestInScroll" type="TextureRect" unique_id=580478946]
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 32.0
+offset_bottom = 32.0
+scale = Vector2(2, 2)
 mouse_filter = 0
 texture = ExtResource("1_ref4s")
 script = ExtResource("2_ref4s")

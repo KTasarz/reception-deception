@@ -24,6 +24,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		else:
 			# Puszczamy lewy przycisk myszy
 			is_dragging = false
+			check_if_dropped_on_board()
 
 func _input(event: InputEvent) -> void:
 	if is_dragging and event is InputEventMouseMotion:
@@ -40,8 +41,8 @@ func check_if_dropped_on_board() -> void:
 		
 		# Sprawdzamy, czy pudełka na siebie nachodzą
 		if paper_rect.intersects(board_rect):
-			print("Zlecenie trafiło na tablicę!")
-			# Tutaj wyślesz sygnał lub wywołasz funkcję akceptacji
+			quest_board.pin_quest(quest)
+			queue_free()
 		else:
 			print("Zlecenie wylądowało gdzieś indziej.")
 			# Opcjonalnie: animacja powrotu zlecenia na środek biurka

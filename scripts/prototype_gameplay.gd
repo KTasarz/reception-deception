@@ -5,9 +5,9 @@ extends Node
 
 var quest : Quest
 
-@export var quest_paper_scene : PackedScene # Tu wrzucasz scenę QuestPaper w Inspektorze
-@onready var quest_board_area = $QuestBoardArea # Referencja do Controla tablicy w głównej scenie
-@onready var scroll_rest_area = $ScrollRestArea # Node, do którego wrzucamy papiery na biurko
+@export var quest_paper_scene : PackedScene 
+@onready var quest_board_area = $QuestBoardArea
+@onready var scroll_rest_area = $ScrollRestArea
 @onready var work_space_area = $WorkSpaceArea
 
 # Called when the node enters the scene tree for the first time.
@@ -28,22 +28,7 @@ func _on_button_exit_pressed() -> void:
 func _on_new_quests_pressed() -> void:
 	var npc : QuestsGivers = $QuestsGiverGenerator.generateQuestsGiver()
 	quest = $QuestsGenerator.generate_quest(npc)
-	var locations : String = ""
-	for i in quest.location_chances:
-		locations = locations + str(QuestsManager.location.keys()[i]) + " "
-	var tags : String = ""
-	for i in quest.tags:
-		tags = tags + str(QuestsManager.quests_tags.keys()[i]) + " "
-	print(
-		"NPC NAME: "+ npc.name + " " + npc.surname +"\n"+
-		"NPC TYPE: "+ QuestsManager.quests_givers_type.keys()[npc.type] +"\n"+
-		"QUEST NAME: " + quest.quest_name +"\n"+
-		"QUEST MONEY: " +str(quest.money) +"\n"+
-		"QUEST LEVEL: " + str(quest.true_level_difficulty) +"\n"+
-		"QUEST LOCATIONS: " + locations +"\n"+
-		"QUEST TAGS: " + tags +"\n"+
-		"QUEST DESCRIPTION: " + quest.description
-	)
+	quest.print_info()
 
 
 func _on_accept_quests_pressed() -> void:
