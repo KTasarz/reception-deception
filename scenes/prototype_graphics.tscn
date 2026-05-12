@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxo7v8f786glr"]
 
 [ext_resource type="Script" uid="uid://djdd8i13645e8" path="res://scripts/prototype_graphics.gd" id="1_bd3ny"]
+[ext_resource type="PackedScene" uid="uid://cyftfejwbd5xl" path="res://scenes/quest_in_scroll.tscn" id="2_dq874"]
 [ext_resource type="Texture2D" uid="uid://c0mjyhi7ewiw8" path="res://assets/sprites/prototype stuff/bottle of wine.png" id="2_hcv8k"]
 [ext_resource type="Texture2D" uid="uid://dnec6077ylbw3" path="res://assets/sprites/prototype stuff/Megumin.png" id="3_vr28a"]
 [ext_resource type="Texture2D" uid="uid://pwi7n4wicfmq" path="res://assets/sprites/prototype stuff/beer.png" id="4_dq874"]
@@ -12,7 +13,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_bd3ny")
+quest_paper_scene = ExtResource("2_dq874")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1126549526]
 layout_mode = 1
@@ -29,31 +32,44 @@ text = "X"
 
 [node name="Wine" type="TextureRect" parent="." unique_id=1003841429]
 layout_mode = 0
-offset_left = 101.0
-offset_top = 56.0
-offset_right = 229.0
-offset_bottom = 184.0
+offset_left = 201.0
+offset_top = 164.0
+offset_right = 329.0
+offset_bottom = 292.0
 mouse_filter = 0
 texture = ExtResource("2_hcv8k")
 stretch_mode = 4
 
 [node name="Beer" type="TextureRect" parent="." unique_id=1614614989]
 layout_mode = 0
-offset_left = 125.0
-offset_top = 139.0
-offset_right = 193.0
-offset_bottom = 207.0
+offset_left = 352.0
+offset_top = 162.0
+offset_right = 420.0
+offset_bottom = 230.0
 texture = ExtResource("4_dq874")
 stretch_mode = 4
 
 [node name="NPC" type="TextureRect" parent="." unique_id=396142534]
 layout_mode = 0
-offset_left = 167.0
-offset_top = 77.0
-offset_right = 243.0
-offset_bottom = 224.0
+offset_left = 445.0
+offset_top = 107.0
+offset_right = 521.0
+offset_bottom = 254.0
 texture = ExtResource("3_vr28a")
 stretch_mode = 4
 
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=876819845]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 92.0
+offset_right = 605.0
+offset_bottom = 132.0
+
+[node name="ButtonCreateScroll" type="Button" parent="VBoxContainer" unique_id=830274199]
+layout_mode = 2
+text = "CREATE
+SCROLL"
+
 [connection signal="pressed" from="CenterContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="gui_input" from="Wine" to="." method="_on_wine_gui_input"]
+[connection signal="pressed" from="VBoxContainer/ButtonCreateScroll" to="." method="_on_button_create_scroll_pressed"]

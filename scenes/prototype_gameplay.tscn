@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0d04jckloca6"]
 
 [ext_resource type="Script" uid="uid://rxvtwtwwpj7c" path="res://scripts/prototype_gameplay.gd" id="1_8qqcq"]
+[ext_resource type="PackedScene" uid="uid://cyftfejwbd5xl" path="res://scenes/quest_in_scroll.tscn" id="2_1u8jd"]
 [ext_resource type="Texture2D" uid="uid://btty80oocfmqw" path="res://assets/sprites/prototype stuff/backround placeholder.png" id="2_8qqcq"]
 [ext_resource type="Script" uid="uid://b8fok6dvldr6n" path="res://classes/quests_generator.gd" id="2_w81h0"]
 [ext_resource type="Script" uid="uid://bcv4imgnovsoe" path="res://classes/quests_givers_generator.gd" id="4_lrif6"]
@@ -13,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8qqcq")
+quest_paper_scene = ExtResource("2_1u8jd")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=842899436]
 layout_mode = 0
@@ -61,26 +63,41 @@ layout_mode = 2
 text = "X"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=944104692]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
-grow_horizontal = 2
+layout_mode = 0
+offset_left = 268.0
+offset_top = 202.0
+offset_right = 352.0
+offset_bottom = 268.0
 
 [node name="NewQuests" type="Button" parent="VBoxContainer2" unique_id=1269764520]
 layout_mode = 2
 text = "NEW Q"
 
-[node name="DeleteQuests" type="Button" parent="VBoxContainer2" unique_id=336595388]
+[node name="AcceptQuests" type="Button" parent="VBoxContainer2" unique_id=336595388]
 layout_mode = 2
-text = "DEL Q"
+text = "ACCEPT Q"
 
-[node name="QuestsInfo" type="Label" parent="VBoxContainer2" unique_id=485825686]
-layout_mode = 2
-text = "UwU"
+[node name="QuestBoardArea" type="Control" parent="." unique_id=579205993]
+anchors_preset = 0
+offset_left = 29.0
+offset_top = 12.0
+offset_right = 137.0
+offset_bottom = 111.0
+
+[node name="WorkSpaceArea" type="Control" parent="." unique_id=1474673522]
+anchors_preset = 0
+offset_left = 355.0
+offset_top = 202.0
+offset_right = 636.0
+offset_bottom = 354.0
+
+[node name="ScrollRestArea" type="Control" parent="." unique_id=1989892163]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 203.0
+offset_right = 267.0
+offset_bottom = 355.0
 
 [connection signal="pressed" from="CenterContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="VBoxContainer2/NewQuests" to="." method="_on_new_quests_pressed"]
+[connection signal="pressed" from="VBoxContainer2/AcceptQuests" to="." method="_on_accept_quests_pressed"]

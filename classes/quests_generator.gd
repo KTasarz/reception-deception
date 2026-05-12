@@ -66,7 +66,8 @@ func generate_quest(npc : QuestsGivers) -> Quest:
 	quest.quest_name = chosen_template.name
 	quest.tags = chosen_template.tags.duplicate()
 	quest.location_chances = chosen_template.location_chances.duplicate() 
-	quest.description = chosen_template.description	
+	quest.description = chosen_template.description
+	quest.giver = npc
 		## Losujemy jeden z opisów
 	#if chosen_template.description_templates.size() > 0:
 		#var raw_desc = chosen_template.description_templates.pick_random()

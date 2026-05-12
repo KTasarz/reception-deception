@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sn3bax536r4b"
-path="res://.godot/imported/base scroll.png-7f9134b4a96e35b40ef85cfd8ca98140.ctex"
+uid="uid://brim5lbln6nue"
+path="res://.godot/imported/orange scroll.png-335af5747c2eb8836499a6e8b0c92152.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/prototype stuff/base scroll.png"
-dest_files=["res://.godot/imported/base scroll.png-7f9134b4a96e35b40ef85cfd8ca98140.ctex"]
+source_file="res://assets/sprites/scrolls/orange scroll.png"
+dest_files=["res://.godot/imported/orange scroll.png-335af5747c2eb8836499a6e8b0c92152.ctex"]
 
 [params]
 

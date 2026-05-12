@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://cyftfejwbd5xl"]
 
-[ext_resource type="Texture2D" uid="uid://sn3bax536r4b" path="res://assets/sprites/prototype stuff/base scroll.png" id="1_ecr43"]
+[ext_resource type="Texture2D" uid="uid://cd30cbtfywu2w" path="res://assets/sprites/scrolls/base scroll.png" id="1_ref4s"]
+[ext_resource type="Script" uid="uid://ceh7tfaj4klx5" path="res://scripts/quest_in_scroll.gd" id="2_ref4s"]
 
 [node name="QuestInScroll" type="TextureRect" unique_id=580478946]
-texture = ExtResource("1_ecr43")
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 0
+texture = ExtResource("1_ref4s")
+script = ExtResource("2_ref4s")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

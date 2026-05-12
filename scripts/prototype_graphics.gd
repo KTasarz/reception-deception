@@ -3,6 +3,9 @@ extends Control
 var is_dragging : bool = false
 var drag_offset : Vector2 = Vector2.ZERO
 
+@export var quest_paper_scene : PackedScene # Tu wrzucasz scenę QuestPaper w Inspektorze
+@onready var spawn_area = $"." # Referencja do Controla tablicy w głównej scenie
+
 func _on_button_exit_pressed() -> void:
 	SceneManager.change_scene("res://scenes/prototype_menu.tscn")
 
@@ -25,3 +28,11 @@ func _input(event: InputEvent) -> void:
 	if is_dragging and event is InputEventMouseMotion:
 		# Aktualizujemy pozycję kartki z uwzględnieniem miejsca, za które ją złapaliśmy
 		$Wine.position = get_global_mouse_position() - drag_offset
+
+
+func _on_button_create_scroll_pressed() -> void:
+	# 1. Tworzymy nową fizyczną kartkę
+	var new_paper = quest_paper_scene.instantiate() as QuestInScroll
+	
+	# 2. Wrzucamy kartkę na biurko (dodajemy do drzewa sceny)
+	spawn_area.add_child(new_paper)
