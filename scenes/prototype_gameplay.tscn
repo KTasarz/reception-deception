@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cyftfejwbd5xl" path="res://scenes/quest_in_scroll.tscn" id="2_1u8jd"]
 [ext_resource type="Texture2D" uid="uid://btty80oocfmqw" path="res://assets/sprites/prototype stuff/backround placeholder.png" id="2_8qqcq"]
 [ext_resource type="Script" uid="uid://b8fok6dvldr6n" path="res://classes/quests_generator.gd" id="2_w81h0"]
+[ext_resource type="PackedScene" uid="uid://blw6acp82yy4a" path="res://scenes/writing_quest.tscn" id="3_lrif6"]
 [ext_resource type="Script" uid="uid://bcv4imgnovsoe" path="res://classes/quests_givers_generator.gd" id="4_lrif6"]
 [ext_resource type="Script" uid="uid://hfxmq5wy0mkq" path="res://scripts/quest_board.gd" id="6_1u8jd"]
 
@@ -15,7 +16,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8qqcq")
-quest_paper_scene = ExtResource("2_1u8jd")
+quest_in_scroll = ExtResource("2_1u8jd")
+paper = ExtResource("3_lrif6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=842899436]
 layout_mode = 0

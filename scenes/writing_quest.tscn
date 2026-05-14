@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://blw6acp82yy4a"]
+
+[ext_resource type="Texture2D" uid="uid://ddg01vsen38mv" path="res://assets/sprites/prototype stuff/paper.png" id="1_d8qci"]
+[ext_resource type="Theme" uid="uid://cnicrn88k4d6d" path="res://themes/quest_writing_themes.tres" id="2_h1dxs"]
+[ext_resource type="Script" uid="uid://dbqy6sqea037r" path="res://scripts/writing_quest.gd" id="2_qsljy"]
+
+[node name="WritingQuest" type="TextureRect" unique_id=1892812598]
+scale = Vector2(4, 4)
+texture = ExtResource("1_d8qci")
+script = ExtResource("2_qsljy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1085964989]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156
+anchor_top = 0.125
+anchor_right = 0.86700004
+anchor_bottom = 0.89100003
+offset_left = 0.007999897
+offset_right = 22.755999
+offset_bottom = 36.732
+scale = Vector2(0.5, 0.5)
+
+[node name="QuestTitle" type="LineEdit" parent="VBoxContainer" unique_id=1289667236]
+layout_mode = 2
+theme = ExtResource("2_h1dxs")
+placeholder_text = "Help needed!"
+
+[node name="QuestDescription" type="TextEdit" parent="VBoxContainer" unique_id=1317104726]
+layout_mode = 2
+theme = ExtResource("2_h1dxs")
+placeholder_text = "QUEST_INFO"
+virtual_keyboard_enabled = false
+
+[node name="LabelLocation" type="Label" parent="VBoxContainer" unique_id=421561784]
+layout_mode = 2
+theme = ExtResource("2_h1dxs")
+text = "Location:"
+
+[node name="LabelReward" type="Label" parent="VBoxContainer" unique_id=1970040415]
+layout_mode = 2
+theme = ExtResource("2_h1dxs")
+text = "Reward:"
+
+[node name="LabelLevel" type="Label" parent="VBoxContainer" unique_id=1162330898]
+layout_mode = 2
+theme = ExtResource("2_h1dxs")
+text = "Quest Level:"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

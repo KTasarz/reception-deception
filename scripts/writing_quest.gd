@@ -1,13 +1,8 @@
 extends TextureRect
-class_name QuestInScroll
+class_name WritingQuest
 
-@export var quest_board : Control
 var is_dragging : bool = false
 var drag_offset : Vector2 = Vector2.ZERO
-var quest : Quest
-
-func _ready() -> void:
-	quest = Quest.new()
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -23,25 +18,8 @@ func _on_gui_input(event: InputEvent) -> void:
 		else:
 			# Puszczamy lewy przycisk myszy
 			is_dragging = false
-			check_if_dropped_on_board()
 
 func _input(event: InputEvent) -> void:
 	if is_dragging and event is InputEventMouseMotion:
 		# Aktualizujemy pozycję kartki z uwzględnieniem miejsca, za które ją złapaliśmy
 		global_position = get_global_mouse_position() - drag_offset
-
-
-func check_if_dropped_on_board() -> void:
-	# Upewniamy się, że tablica jest podpięta
-	if quest_board != null:
-		# Pobieramy "pudełka" (prostokąty) kartki i tablicy
-		var paper_rect = get_global_rect()
-		var board_rect = quest_board.get_global_rect()
-		
-		# Sprawdzamy, czy pudełka na siebie nachodzą
-		if paper_rect.intersects(board_rect):
-			quest_board.pin_quest(quest)
-			queue_free()
-		else:
-			print("Zlecenie wylądowało gdzieś indziej.")
-			# Opcjonalnie: animacja powrotu zlecenia na środek biurka

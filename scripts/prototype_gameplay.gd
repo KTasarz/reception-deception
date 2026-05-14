@@ -5,7 +5,8 @@ extends Node
 
 var quest : Quest
 
-@export var quest_paper_scene : PackedScene 
+@export var quest_in_scroll : PackedScene
+@export var paper : PackedScene
 @onready var quest_board_area = $QuestBoardArea
 @onready var scroll_rest_area = $ScrollRestArea
 @onready var work_space_area = $WorkSpaceArea
@@ -29,10 +30,11 @@ func _on_new_quests_pressed() -> void:
 	var npc : QuestsGivers = $QuestsGiverGenerator.generateQuestsGiver()
 	quest = $QuestsGenerator.generate_quest(npc)
 	quest.print_info()
+	work_space_area.add_child(paper.instantiate() as WritingQuest)
 
 
 func _on_accept_quests_pressed() -> void:
-	var new_quest_scroll = quest_paper_scene.instantiate() as QuestInScroll
+	var new_quest_scroll = quest_in_scroll.instantiate() as QuestInScroll
 	work_space_area.add_child(new_quest_scroll)
 	new_quest_scroll.quest = quest
 	new_quest_scroll.quest_board = quest_board_area

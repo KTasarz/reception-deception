@@ -1,0 +1,30 @@
+[gd_resource type="Theme" format=3 uid="uid://cnicrn88k4d6d"]
+
+[ext_resource type="FontFile" uid="uid://db8rygsqr3io5" path="res://assets/fonts/poco/Poco.ttf" id="1_ugt6q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugt6q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epk6h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+Label/colors/font_color = Color(0.53730756, 0.38473314, 0.14254633, 1)
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("1_ugt6q")
+LineEdit/colors/font_color = Color(0.53730756, 0.38473314, 0.14254633, 1)
+LineEdit/colors/font_placeholder_color = Color(0.53730756, 0.38473314, 0.14254633, 1)
+LineEdit/colors/selection_color = Color(0.5, 0.5, 0.5, 1)
+LineEdit/font_sizes/font_size = 8
+LineEdit/fonts/font = ExtResource("1_ugt6q")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_ugt6q")
+TextEdit/colors/caret_background_color = Color(0, 0, 0, 0)
+TextEdit/colors/caret_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+TextEdit/colors/font_color = Color(0.53730756, 0.38473314, 0.14254633, 1)
+TextEdit/colors/font_outline_color = Color(0, 0, 0, 0)
+TextEdit/colors/font_placeholder_color = Color(0.53730756, 0.38473314, 0.14254633, 1)
+TextEdit/colors/search_result_color = Color(0.3019608, 0.3019608, 0.3019608, 0)
+TextEdit/colors/selection_color = Color(0.5019608, 0.5019608, 0.5019608, 0)
+TextEdit/font_sizes/font_size = 8
+TextEdit/fonts/font = ExtResource("1_ugt6q")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_epk6h")
