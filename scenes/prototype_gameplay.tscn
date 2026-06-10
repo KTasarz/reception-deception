@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://blw6acp82yy4a" path="res://scenes/writing_quest.tscn" id="3_lrif6"]
 [ext_resource type="Script" uid="uid://bcv4imgnovsoe" path="res://classes/quests_givers_generator.gd" id="4_lrif6"]
 [ext_resource type="Script" uid="uid://hfxmq5wy0mkq" path="res://scripts/quest_board.gd" id="6_1u8jd"]
+[ext_resource type="PackedScene" uid="uid://ci3ulk124tubw" path="res://scenes/map.tscn" id="7_mfa1r"]
 
 [node name="Control" type="Control" unique_id=1489374112]
 layout_mode = 3
@@ -19,7 +20,7 @@ script = ExtResource("1_8qqcq")
 quest_in_scroll = ExtResource("2_1u8jd")
 paper = ExtResource("3_lrif6")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=842899436]
+[node name="Backround" type="TextureRect" parent="." unique_id=842899436]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
@@ -119,6 +120,21 @@ offset_left = 355.0
 offset_top = 202.0
 offset_right = 636.0
 offset_bottom = 354.0
+
+[node name="Map" parent="." unique_id=236505580 instance=ExtResource("7_mfa1r")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -132.0
+offset_right = 379.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="CenterContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="VBoxContainer2/NewQuests" to="." method="_on_new_quests_pressed"]

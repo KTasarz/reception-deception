@@ -6,6 +6,5 @@
 script = ExtResource("1_wtjy6")
 name = "testNAME"
 description = "testDESC"
-tags = Array[int]([0])
 allowed_givers = Array[int]([0, 1, 2, 3, 4, 5])
 metadata/_custom_type_script = "uid://cka85p7ksx33j"

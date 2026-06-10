@@ -7,9 +7,12 @@ var quest : Quest
 
 @export var quest_in_scroll : PackedScene
 @export var paper : PackedScene
+@onready var map = $Map
 @onready var quest_board_area = $QuestBoardArea
 @onready var scroll_rest_area = $ScrollRestArea
 @onready var work_space_area = $WorkSpaceArea
+
+var current_draft_form : WritingQuest = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,10 +33,24 @@ func _on_new_quests_pressed() -> void:
 	var npc : QuestsGivers = $QuestsGiverGenerator.generateQuestsGiver()
 	quest = $QuestsGenerator.generate_quest(npc)
 	quest.print_info()
-	work_space_area.add_child(paper.instantiate() as WritingQuest)
+	
+	var new_paper = paper.instantiate() as WritingQuest
+	work_space_area.add_child(new_paper)
+	new_paper.open_map_requested.connect(_on_paper_requested_map)
+	
+	current_draft_form = new_paper
 
+func _on_paper_requested_map(paper_instance : WritingQuest):
+	# Mówimy mapie, która kartka o nią prosi
+	map.open_for_paper(paper_instance)
 
 func _on_accept_quests_pressed() -> void:
+	if current_draft_form == null:
+		print("The form paper doesnt exist!")
+		return
+	
+	current_draft_form.update_quest_data(quest)
+	
 	var new_quest_scroll = quest_in_scroll.instantiate() as QuestInScroll
 	work_space_area.add_child(new_quest_scroll)
 	new_quest_scroll.quest = quest
@@ -51,3 +68,6 @@ func _on_accept_quests_pressed() -> void:
 			new_quest_scroll.texture = load("res://assets/sprites/scrolls/white scroll.png")
 		5:
 			new_quest_scroll.texture = load("res://assets/sprites/scrolls/blue scroll.png")
+	
+	current_draft_form.queue_free()
+	current_draft_form = null

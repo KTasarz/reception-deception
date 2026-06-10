@@ -11,7 +11,7 @@ class_name Quest
 
 @export var is_location_hidden : bool
 @export var player_set_location : QuestsManager.location
-@export var player_set_guild_cut : float
+@export var player_set_reward : float
 @export var player_set_required_level : int
 
 func print_info() -> void:

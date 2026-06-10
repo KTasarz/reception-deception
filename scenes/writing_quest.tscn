@@ -5,21 +5,22 @@
 [ext_resource type="Script" uid="uid://dbqy6sqea037r" path="res://scripts/writing_quest.gd" id="2_qsljy"]
 
 [node name="WritingQuest" type="TextureRect" unique_id=1892812598]
-scale = Vector2(4, 4)
+scale = Vector2(5, 5)
 texture = ExtResource("1_d8qci")
 script = ExtResource("2_qsljy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1085964989]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.156
-anchor_top = 0.125
+anchor_left = 0.113000005
+anchor_top = 0.086
 anchor_right = 0.86700004
 anchor_bottom = 0.89100003
-offset_left = 0.007999897
-offset_right = 22.755999
-offset_bottom = 36.732
-scale = Vector2(0.5, 0.5)
+offset_left = 1.184
+offset_top = -0.0030002594
+offset_right = 70.656
+offset_bottom = 118.456985
+scale = Vector2(0.25, 0.25)
 
 [node name="QuestTitle" type="LineEdit" parent="VBoxContainer" unique_id=1289667236]
 layout_mode = 2
@@ -30,21 +31,32 @@ placeholder_text = "Help needed!"
 layout_mode = 2
 theme = ExtResource("2_h1dxs")
 placeholder_text = "QUEST_INFO"
+wrap_mode = 1
 virtual_keyboard_enabled = false
 
-[node name="LabelLocation" type="Label" parent="VBoxContainer" unique_id=421561784]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=465147488]
+layout_mode = 2
+
+[node name="Location" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1340419671]
 layout_mode = 2
 theme = ExtResource("2_h1dxs")
 text = "Location:"
+flat = true
 
-[node name="LabelReward" type="Label" parent="VBoxContainer" unique_id=1970040415]
+[node name="Reward" type="SpinBox" parent="VBoxContainer" unique_id=1741907803]
 layout_mode = 2
 theme = ExtResource("2_h1dxs")
-text = "Reward:"
+max_value = 1000.0
+prefix = "Reward"
+suffix = "Gold"
 
-[node name="LabelLevel" type="Label" parent="VBoxContainer" unique_id=1162330898]
+[node name="Level" type="SpinBox" parent="VBoxContainer" unique_id=1546469064]
 layout_mode = 2
 theme = ExtResource("2_h1dxs")
-text = "Quest Level:"
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
+prefix = "Quest Level:"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/Location" to="." method="_on_location_pressed"]
