@@ -22,6 +22,7 @@ SceneManager="*uid://ddx4c8e4736fy"
 GameStatsManager="*uid://fr44pvrkcsbh"
 QuestsManager="*uid://cqkxp4woxhgea"
 NameManager="*uid://bfa8kgujpudbt"
+WorldManager="*uid://jx3owjf3jeah"
 
 [display]
 
@@ -46,6 +47,11 @@ folder_colors={
 "res://scenes/": "red",
 "res://scripts/": "purple"
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/language/Locations.en.translation")
+locale/test="en"
 
 [physics]
 

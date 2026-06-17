@@ -70,6 +70,54 @@ layout_mode = 2
 text = "CREATE
 SCROLL"
 
+[node name="ButtonTest1" type="Button" parent="." unique_id=1729643827]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 35.0
+offset_right = 102.0
+offset_bottom = 99.0
+text = "Apterczka"
+
+[node name="ButtonTest2" type="Button" parent="." unique_id=1912308873]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 36.0
+offset_right = 201.0
+offset_bottom = 100.0
+text = "Balon
+"
+
+[node name="ButtonTest3" type="Button" parent="." unique_id=1939108493]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 35.0
+offset_right = 294.0
+offset_bottom = 99.0
+text = "Call
+"
+
+[node name="ButtonWrite" type="Button" parent="." unique_id=285965214]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 126.0
+offset_right = 102.0
+offset_bottom = 190.0
+text = "Wypisz
+"
+
+[node name="ButtonClear" type="Button" parent="." unique_id=1151533009]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 124.0
+offset_right = 199.0
+offset_bottom = 188.0
+text = "Wyczyść"
+
 [connection signal="pressed" from="CenterContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="gui_input" from="Wine" to="." method="_on_wine_gui_input"]
 [connection signal="pressed" from="VBoxContainer/ButtonCreateScroll" to="." method="_on_button_create_scroll_pressed"]
+[connection signal="pressed" from="ButtonTest1" to="." method="_on_button_test_1_pressed"]
+[connection signal="pressed" from="ButtonTest2" to="." method="_on_button_test_2_pressed"]
+[connection signal="pressed" from="ButtonTest3" to="." method="_on_button_test_3_pressed"]
+[connection signal="pressed" from="ButtonWrite" to="." method="_on_button_write_pressed"]
+[connection signal="pressed" from="ButtonClear" to="." method="_on_button_clear_pressed"]
