@@ -14,20 +14,12 @@ var quest : Quest
 
 var current_draft_form : WritingQuest = null
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	label_money.text = "Money: "+ str(GameStatsManager.money)
 	label_guild_level.text = "Level: "+ str(GameStatsManager.guild_level)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_button_exit_pressed() -> void:
 	SceneManager.change_scene("res://scenes/prototype_menu.tscn")
-
 
 func _on_new_quests_pressed() -> void:
 	var npc : QuestsGivers = $QuestsGiverGenerator.generateQuestsGiver()
