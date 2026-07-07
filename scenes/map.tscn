@@ -40,7 +40,7 @@ offset_right = 242.0
 offset_bottom = 297.0
 flat = true
 
-[connection signal="pressed" from="Caves" to="." method="_on_location_selected" binds= ["green cave"]]
-[connection signal="pressed" from="Valley" to="." method="_on_location_selected" binds= ["valley of wind"]]
-[connection signal="pressed" from="Forest" to="." method="_on_location_selected" binds= ["boardwood"]]
-[connection signal="pressed" from="River" to="." method="_on_location_selected" binds= ["fishy river"]]
+[connection signal="pressed" from="Caves" to="." method="_on_location_selected" binds= ["CAVE"]]
+[connection signal="pressed" from="Valley" to="." method="_on_location_selected" binds= ["VALLEY"]]
+[connection signal="pressed" from="Forest" to="." method="_on_location_selected" binds= ["FOREST"]]
+[connection signal="pressed" from="River" to="." method="_on_location_selected" binds= ["RIVER"]]

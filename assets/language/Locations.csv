@@ -1,8 +1,8 @@
 keys,en
 LOC_CAPITAL_01,The city
-LOC_FOTEST_01,Boardwoods
-LOC_FOTEST_02,Peaceful forest
-LOC_FOTEST_03,Berrywoods
+LOC_FOREST_01,Boardwoods
+LOC_FOREST_02,Peaceful forest
+LOC_FOREST_03,Berrywoods
 LOC_CAVE_01,Green cave
 LOC_VALLEY_01,Valley of winds
 LOC_RIVER_01,Fishy river
