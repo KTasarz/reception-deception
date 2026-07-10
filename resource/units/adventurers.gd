@@ -15,6 +15,6 @@ func evaluate_quest_appel(quest: Quest, intoxication: int, given_by_player: bool
 	#tu dać modyfikowanie score za pomocą różnic w poziomie
 	
 	if given_by_player:
-		score *= GameStatsManager.base_penalty_for_giving_quest+(float(intoxication)/100.0)
+		score *= UpgradableStatsManager.base_penalty_for_giving_quest+(float(intoxication)/100.0)
 	
 	return score

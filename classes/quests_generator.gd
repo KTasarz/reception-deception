@@ -48,7 +48,7 @@ func generate_quest(npc : QuestsGivers) -> Quest:
 		quest.true_level_difficulty = 1
 	
 	quest.money = randi_range(quest.true_level_difficulty*10,quest.true_level_difficulty*100)
-	quest.money = quest.money * GameStatsManager.get_random_money(npc.type)
+	quest.money = quest.money * UpgradableStatsManager.get_random_money(npc.type)
 	
 	var chosen_template : QuestTemplate = valid_templates.pick_random()
 	quest.quest_name = chosen_template.name

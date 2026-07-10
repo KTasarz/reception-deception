@@ -23,6 +23,7 @@ GameStatsManager="*uid://fr44pvrkcsbh"
 QuestsManager="*uid://cqkxp4woxhgea"
 NameManager="*uid://bfa8kgujpudbt"
 WorldManager="*uid://jx3owjf3jeah"
+UpgradableStatsManager="*uid://dh5bk5h7akpna"
 
 [display]
 
