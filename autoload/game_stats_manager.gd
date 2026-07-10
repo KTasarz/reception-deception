@@ -28,6 +28,7 @@ var money_ranges := {
 		"max": 5.0
 	},
 }
+var base_penalty_for_giving_quest: float = 0.75
 
 func get_random_money(npc_type: QuestsManager.quests_givers_type) -> float:
 	var range = money_ranges[npc_type]
