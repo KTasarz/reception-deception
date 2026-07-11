@@ -5,7 +5,7 @@ class_name BasebattleUnit
 @export var sprite : Texture2D
 @export var level : int
 @export var hp : float
-@export var juice : float 		#mana, energy, etc.
+@export var juice_points : float 		#mana, energy, etc.
 @export var strength : int		#stat for melee dmg
 @export var agility : int		#stat for range dmg
 @export var inteligence : int	#stat for magic dmg

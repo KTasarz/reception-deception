@@ -9,7 +9,9 @@ func evaluate_quest_appel(quest: Quest, intoxication: int, given_by_player: bool
 	score += quest.player_set_reward * class_type.greed_multiplayer
 	
 	for tag in quest.tags:
+		var bonus = class_type.tag_bonus.get(tag,0)
 		var weight = class_type.tag_weight.get(tag, 1.0)
+		score += bonus
 		score *= weight
 	
 	#tu dać modyfikowanie score za pomocą różnic w poziomie
