@@ -2,6 +2,8 @@ extends BasebattleUnit
 class_name Adventurers
 
 @export var class_type : AdventureClass
+@export var days_of_contract : int
+@export var adventure_rank : int
 
 func evaluate_quest_appel(quest: Quest, intoxication: int, given_by_player: bool) -> float:
 	var score : float = 0.0
