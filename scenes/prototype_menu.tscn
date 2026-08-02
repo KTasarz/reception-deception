@@ -31,10 +31,15 @@ text = "Prototyp main gameplayu"
 layout_mode = 2
 text = "Graphics test ground"
 
+[node name="ButtonTestTiles" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1624081162]
+layout_mode = 2
+text = "Tiles test"
+
 [node name="ButtonExit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=852257851]
 layout_mode = 2
 text = "Exit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonGameplay" to="." method="_on_button_gameplay_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Buttongraphics" to="." method="_on_buttongraphics_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonTestTiles" to="." method="_on_button_test_tiles_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
