@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://djoohhxmvfo5a"]
 
 [ext_resource type="Texture2D" uid="uid://cmntd7woui80h" path="res://assets/sprites/Tiles/testfloor.png" id="1_d4dti"]
-[ext_resource type="Texture2D" uid="uid://bge4k5ieepv4a" path="res://assets/sprites/Tiles/testWalls.png" id="1_rwjq0"]
+[ext_resource type="Texture2D" uid="uid://dd3t8226wj3bj" path="res://assets/sprites/Tiles/testWalls.png" id="1_rwjq0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfxpg"]
 texture = ExtResource("1_rwjq0")
@@ -10,6 +10,10 @@ texture_region_size = Vector2i(128, 256)
 0:0/0/texture_origin = Vector2i(0, 80)
 1:0/0 = 0
 1:0/0/texture_origin = Vector2i(0, 80)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, 80)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 16)
 
 [sub_resource type="TileSet" id="TileSet_xgquo"]
 tile_shape = 1
@@ -34,10 +38,10 @@ sources/0 = SubResource("TileSetAtlasSource_rwjq0")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1248464533]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAABAAIAAAABAAAAAAAAAAIAAAABAAAAAAD//wIAAAABAAAAAAD+/wIAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAD9/wIAAAABAAAAAAD+/wMAAAACAAAAAAD//wQAAAACAAAAAAABAAcAAAACAAAAAAD+/wIAAAADAAAAAAAAAAQAAAABAAAAAAACAAgAAAAAAAAAAAABAAQAAAABAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAABAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_xgquo")
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1080274439]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD+/wMAAAAAAAAAAAABAAMAAAAAAAAAAAABAAYAAAAAAAAAAAD+/wYAAAAAAAAAAAAAAAMAAAAAAAAAAAD//wMAAAAAAAAAAAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAD+/wQAAAAAAAAAAAAAAAYAAAAAAAAAAAD//wYAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD+/wYAAAAAAAAAAAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAD+/wQAAAAAAAAAAAD//wYAAAAAAAAAAAD9/wQAAAAAAAAAAAAAAAcAAAAAAAAAAAD+/wcAAAAAAAAAAAD+/wgAAAAAAAAAAAD//wgAAAAAAAAAAAAAAAgAAAAAAAAAAAD//wcAAAAAAAAAAAABAAgAAAAAAAAAAAD9/wUAAAAAAAAAAAD9/wMAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAAAAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_pckxj")
