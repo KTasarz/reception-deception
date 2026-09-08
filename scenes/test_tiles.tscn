@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd3t8226wj3bj" path="res://assets/sprites/Tiles/testWalls.png" id="1_rwjq0"]
 [ext_resource type="Texture2D" uid="uid://c66gfhwu5eseq" path="res://assets/sprites/Tiles/PlaceholderFurniture.png" id="2_m4bea"]
 [ext_resource type="Texture2D" uid="uid://cq0nvjkgxugq7" path="res://assets/sprites/Tiles/FloorsTiles.png" id="4_8dhdt"]
+[ext_resource type="Texture2D" uid="uid://2tucluxr0hp4" path="res://assets/sprites/Tiles/tables.png" id="5_8dhdt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfxpg"]
 texture = ExtResource("1_rwjq0")
@@ -17,22 +18,11 @@ texture_region_size = Vector2i(128, 256)
 3:0/0 = 0
 3:0/0/texture_origin = Vector2i(0, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kk1o"]
-texture = ExtResource("2_m4bea")
-texture_region_size = Vector2i(128, 288)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, 111)
-1:0/0 = 0
-1:0/0/texture_origin = Vector2i(0, 111)
-2:0/0 = 0
-2:0/0/texture_origin = Vector2i(0, 111)
-
 [sub_resource type="TileSet" id="TileSet_xgquo"]
 tile_shape = 1
 tile_layout = 4
 tile_size = Vector2i(128, 64)
 sources/0 = SubResource("TileSetAtlasSource_wfxpg")
-sources/1 = SubResource("TileSetAtlasSource_4kk1o")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwjq0"]
 texture = ExtResource("1_d4dti")
@@ -62,6 +52,31 @@ tile_size = Vector2i(128, 64)
 sources/0 = SubResource("TileSetAtlasSource_rwjq0")
 sources/1 = SubResource("TileSetAtlasSource_keysh")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kk1o"]
+texture = ExtResource("2_m4bea")
+texture_region_size = Vector2i(128, 288)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 111)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 111)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, 111)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyeky"]
+texture = ExtResource("5_8dhdt")
+texture_region_size = Vector2i(128, 144)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 24)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 24)
+
+[sub_resource type="TileSet" id="TileSet_1fdcd"]
+tile_shape = 1
+tile_layout = 4
+tile_size = Vector2i(128, 64)
+sources/1 = SubResource("TileSetAtlasSource_4kk1o")
+sources/2 = SubResource("TileSetAtlasSource_iyeky")
+
 [node name="TestTiles" type="Node2D" unique_id=1783452156]
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1248464533]
@@ -76,5 +91,5 @@ tile_set = SubResource("TileSet_pckxj")
 
 [node name="Furniture" type="TileMapLayer" parent="." unique_id=594712089]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD+/wQAAQAAAAAAAAD+/wUAAQABAAAAAAD//wYAAQACAAAAAAD//wgAAQACAAAAAAA=")
-tile_set = SubResource("TileSet_xgquo")
+tile_map_data = PackedByteArray("AAD+/wQAAQAAAAAAAAABAAgAAgAAAAAAAAD+/wYAAgAAAAAAAAD//wcAAgABAAAAAAD+/wUAAQAAAAAAAAD//wYAAQAAAAAAAAD+/wcAAQAAAAAAAAD//wgAAQAAAAAAAAAAAAcAAQAAAAAAAAD9/wYAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_1fdcd")
